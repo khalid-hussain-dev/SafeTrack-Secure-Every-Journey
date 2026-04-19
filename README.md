@@ -204,7 +204,7 @@ flowchart TD
     Receiver["LocationReceiver"] -->|Boot, package replaced, restart action| LocationService
     LocationService -->|Read device position| Fused["FusedLocationProviderClient"]
     Fused -->|Location samples| LocationService
-    LocationService -->|Save recent history (48h)| Room["Room / location_history"]
+    LocationService -->|Save recent history 48h| Room["Room location_history"]
     LocationService -->|Publish latest live location| RTDB
     RTDB -->|watcher_heartbeats| LocationService
 
